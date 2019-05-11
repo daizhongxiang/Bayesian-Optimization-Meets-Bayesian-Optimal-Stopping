@@ -18,6 +18,8 @@ def run_BOS(init_curve, incumbent, training_epochs, bo_iteration):
     
     grid_size = 100
     sample_number = 200
+    
+    # this number can be reduced to improve the time efficiency, at the potential expense of less accurate approximation
     fs_sample_number = 100000
 
     ###### define the cost parameters, including K_2, c, and the K_1 sequence
