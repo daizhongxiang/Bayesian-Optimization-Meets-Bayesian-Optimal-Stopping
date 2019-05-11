@@ -306,21 +306,10 @@ class BayesianOptimization(object):
                 y_max = self.Y[-1]
                 self.incumbent = self.Y[-1]
 
-
 #             # Updating the GP.
             ur = unique_rows(self.X)
 
-#             print("[shapes of self.X/Y: {0}/{1}]".format(self.X.shape, self.Y.shape))
-#             self.gp = GPy.models.GPRegression(self.X[ur], self.Y[ur].reshape(-1, 1), \
-#                             GPy.kern.Matern52(input_dim=self.X.shape[1], variance=1.0, lengthscale=1.0))
-
-#             if self.gp_params != None:
-#                 self.gp.parameters = self.gp_params
-
-
             self.gp.set_XY(X=self.X[ur], Y=self.Y[ur].reshape(-1, 1))
-
-
 
             if i >= self.gp_opt_schedule and i % self.gp_opt_schedule == 0:
                 self.gp.optimize_restarts(num_restarts = 10, messages=False)
