@@ -32,9 +32,9 @@ Description of the directories:
 key dependencies (excluding commonly used packages such as scipy, numpy, tensorflow, keras, etc.)
 * GPy
     * install GPy
-    * add the line "from .src.exp_kern import ExpKernel" to "PYTHON_PATH/lib/python3.5/site-packages/GPy/kern/__init__.py"
-    * add the line "from .exp_kern import ExpKernel" to "PYTHON_PATH/lib/python3.5/site-packages/GPy/kern/src/__init__.py"
+    * add the line "from .src.exp_kern import ExpKernel" to "PYTHON_PATH/lib/python3.5/site-packages/GPy/kern/\_\_init\_\_.py"
+    * add the line "from .exp_kern import ExpKernel" to "PYTHON_PATH/lib/python3.5/site-packages/GPy/kern/src/\_\_init\_\_.py"
     * place the script "exp_kern.py" in the "dependencies" folder to the folder "PYTHON_PATH/lib/python3.5/site-packages/GPy/kern/"
 * scipydirect: this package uses the DIRECT method to optimize the acquisition function
     * install scipydirect with "pip install scipydirect"
-    * replace the content of the script "PYTHON_PATH/lib/python3.5/site-packages/scipydirect/__init__.py" with the content of the script "scipydirect_for_bo_bos.py" in the "dependencies" folder; this step is required since we modified the interface of the scipydirect minimize function
+    * replace the content of the script "PYTHON_PATH/lib/python3.5/site-packages/scipydirect/\_\_init\_\_.py" with the content of the script "scipydirect_for_bo_bos.py" in the "dependencies" folder; this step is required since we modified the interface of the scipydirect minimize function
