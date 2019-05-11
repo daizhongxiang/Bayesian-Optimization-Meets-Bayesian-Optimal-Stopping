@@ -1,0 +1,1 @@
+This folder saves the random initializations used by GP-UCB, such that BO-BOS can use the same set of random initializations as those used by GP-UCB.
